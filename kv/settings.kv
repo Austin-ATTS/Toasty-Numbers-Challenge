@@ -1,1 +1,9 @@
 <Settings>:
+    FloatLayout:
+        Button:
+            id: home_button
+            size_hint: None, None
+            size: self.height, self.height
+            pos_hint: {'top': 1, 'left': 1}
+           #background_normal: 'assets/icons/home'
+            on_release: app.root.current = 'home'
