@@ -5,4 +5,4 @@ class ToastyNumbersApp(App):
         return
 
 if __name__ == '__main__':
-    ToastyNumbersApp.run()
+    ToastyNumbersApp().run()
