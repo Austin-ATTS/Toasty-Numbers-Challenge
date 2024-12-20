@@ -1,1 +1,39 @@
 <Home>:
+    FloatLayout:
+       #Image:
+           #source: 'assets/images/background'
+           #allow_stretch: True
+           #keep_ratio: False
+           #size_hint: 1. 1
+           #pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Button:
+            id: account_button
+            size_hint: None, None
+            size: dp(60), dp(60)
+            pos_hint: {'top': 1, 'right': 1}
+           #background_normal: 'account/profile_picture'
+            on_release: app.root.current = 'account'
+        Label:
+            id: title
+            text: 'Toasty Numbers Challenge'
+            font_size: '40sp'
+            size_hint: None, None
+            size: self.texture_size
+            pos_hint: {'center_x': 0.5, 'center_y': 0.65}
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 20
+            size_hint: 0.5, 0.5
+            pos_hint: {'center_x': 0.5, 'top': 0.5}
+            Button:
+                text: 'Rounds Mode'
+                on_release: app.root.current = 'rounds_mode'
+            Button:
+                text: 'Endless Mode'
+                on_release: app.root.current = 'endless_mode'
+            Button:
+                text: 'Leaderboard'
+                on_release: app.root.current = 'leaderboard'
+            Button:
+                text: 'Settings'
+                on_release: app.root.current = 'settings'
